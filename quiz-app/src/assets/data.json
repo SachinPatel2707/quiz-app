@@ -1,0 +1,118 @@
+[
+    {
+        "quizId": 1,
+        "subName": "Physics",
+        "questions": [
+            {
+                "quesId": 1,
+                "quesText": "Who invented Transformer?",
+                "choices": [
+                    {
+                        "choiceId": 1,
+                        "choiceText": "Faraday",
+                        "answer": true
+                    },
+                    {
+                        "choiceId": 2,
+                        "choiceText": "Einstein",
+                        "answer": false
+                    },
+                    {
+                        "choiceId": 3,
+                        "choiceText": "Parsons",
+                        "answer": false
+                    },
+                    {
+                        "choiceId": 4,
+                        "choiceText": "C.R.T Wilson",
+                        "answer": false
+                    }
+                ]
+            },
+            {
+                "quesId": 2,
+                "quesText": "Which of the following is the outstanding contribution of Scientist Aneriko Fermi in Physics?",
+                "choices": [
+                    {
+                        "choiceId": 5,
+                        "choiceText": "Nuclear Furnace",
+                        "answer": true
+                    },
+                    {
+                        "choiceId": 6,
+                        "choiceText": "Laws of Motion",
+                        "answer": false
+                    },
+                    {
+                        "choiceId": 7,
+                        "choiceText": "Discovery of Calculus",
+                        "answer": false
+                    },
+                    {
+                        "choiceId": 8,
+                        "choiceText": "Parasite",
+                        "answer": false
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "quizId": 2,
+        "subName": "Biology",
+        "questions": [
+            {
+                "quesId": 3,
+                "quesText": "Name the pigment which is responsible for absorption of light in plants?",
+                "choices": [
+                    {
+                        "choiceId": 9,
+                        "choiceText": "Chlorophyll",
+                        "answer": true
+                    },
+                    {
+                        "choiceId": 10,
+                        "choiceText": "Stoma",
+                        "answer": false
+                    },
+                    {
+                        "choiceId": 11,
+                        "choiceText": "Xylem",
+                        "answer": false
+                    },
+                    {
+                        "choiceId": 12,
+                        "choiceText": "Phloem",
+                        "answer": false
+                    }
+                ]
+            },
+            {
+                "quesId": 4,
+                "quesText": "Which blood vessels have the smallest diameter?",
+                "choices": [
+                    {
+                        "choiceId": 13,
+                        "choiceText": "Capillaries",
+                        "answer": true
+                    },
+                    {
+                        "choiceId": 14,
+                        "choiceText": "Arterioles",
+                        "answer": false
+                    },
+                    {
+                        "choiceId": 15,
+                        "choiceText": "Venules",
+                        "answer": false
+                    },
+                    {
+                        "choiceId": 16,
+                        "choiceText": "Lymphatic",
+                        "answer": false
+                    }
+                ]
+            }
+        ]
+    }
+]
