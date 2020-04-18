@@ -7,13 +7,13 @@ header {
     font-weight: 300;
     background-position: center;
     position: relative;
+    text-transform: uppercase;
 }
 
 h2 {
     width: 100%;
     font-size: 200%;
     font-weight: 300;
-    text-transform: uppercase;
     margin-bottom: 30px;
 }
 
@@ -36,11 +36,13 @@ a {
 /* ------- BUTTONS ------- */
 
 .btn {
-    border: 1px solid #fff;
+    border: 1px solid #bf6516;
     border-radius: 200px;
     /* margin: 20px; */
-    padding: 10px 20px;
-    transition: border-color 0.2s, border 0.2s;
+    padding: 7.5px 15px;
+    font-weight: 300;
+    font-size: 90%;
+    transition: background-color 0.2s, border 0.2s;
 }
 
 .btn:hover {

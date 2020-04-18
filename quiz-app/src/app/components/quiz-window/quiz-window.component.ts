@@ -1,14 +1,13 @@
 import { Component, OnInit } from '@angular/core';
+import { Quiz } from 'src/app/models/quiz';
 import { QuizService } from 'src/app/services/quiz.service';
 
-import { Quiz } from '../../models/quiz';
-
 @Component({
-  selector: 'app-test',
-  templateUrl: './test.component.html',
-  styleUrls: ['./test.component.css']
+  selector: 'app-quiz-window',
+  templateUrl: './quiz-window.component.html',
+  styleUrls: ['./quiz-window.component.css']
 })
-export class TestComponent implements OnInit {
+export class QuizWindowComponent implements OnInit {
 
   // dummy data
   quizes: Quiz[] = []
