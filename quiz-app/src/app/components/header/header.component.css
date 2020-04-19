@@ -1,13 +1,22 @@
-header {
-    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("../../../assets/img/steve-johnson-5Oe8KFH5998-unsplash.jpg");
-    height: 100vh;
-    background-size: cover;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* background-color: #fff; */
     color: #fff;
     font-family: 'Lato', sans-serif;
+    font-size: 20px;
     font-weight: 300;
-    background-position: center;
-    position: relative;
     text-transform: uppercase;
+    letter-spacing: 1px;
+    text-rendering: optimizeLegibility;
+}
+
+.header {
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("../../../assets/img/steve-johnson-5Oe8KFH5998-unsplash.jpg");
+    background-size: cover;
+    background-position: center;
 }
 
 h2 {
@@ -27,15 +36,23 @@ h2 {
 
 a {
     border-style: none;
+    text-decoration: none;
+    color: inherit;
 }
 
 .header-text a:last-of-type {
     margin-left: 20px;
 }
 
+.row {
+    width: 80%;
+    margin: 0 auto;
+    padding: 2% 0;
+}
+
 /* ------- BUTTONS ------- */
 
-.btn {
+.button {
     border: 1px solid #bf6516;
     border-radius: 200px;
     /* margin: 20px; */
@@ -45,7 +62,8 @@ a {
     transition: background-color 0.2s, border 0.2s;
 }
 
-.btn:hover {
+.button:hover {
     background-color: #bf6516;
     border: 1px solid #bf6516;
+    color: #fff;
 }

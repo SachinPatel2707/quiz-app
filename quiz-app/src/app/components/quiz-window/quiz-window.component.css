@@ -65,7 +65,7 @@ nav {
     display: inline-block;
 }
 
-.btn {
+.button {
     border: 1px solid #bf6516;
     border-radius: 200px;
     margin: 20px;
@@ -75,7 +75,7 @@ nav {
     transition: background-color 0.2s, border 0.2s;
 }
 
-.btn:hover {
+.button:hover {
     background-color: #bf6516;
     border: 1px solid #bf6516;
     color: #fff;
