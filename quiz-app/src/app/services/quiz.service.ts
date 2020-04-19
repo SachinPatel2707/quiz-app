@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { Quiz } from '../models/quiz';
  
 const _baseUrl = '../../assets/data.json'
 
@@ -15,6 +16,5 @@ export class QuizService {
   fetchQuizes(): Observable<any> {
     return this.http.get(_baseUrl)
   }
-
-  // fetch one quiz by its id
+ 
 }

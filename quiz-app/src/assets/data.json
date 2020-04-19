@@ -54,6 +54,32 @@
                         "answer": false
                     }
                 ]
+            },
+            {
+                "quesId": 5,
+                "quesText": "The sunlight from the sun to the earth reaches in -",
+                "choices": [
+                    {
+                        "choiceId": 1,
+                        "choiceText": "5 minutes",
+                        "answer": false
+                    },
+                    {
+                        "choiceId": 2,
+                        "choiceText": "6 minutes",
+                        "answer": false
+                    },
+                    {
+                        "choiceId": 3,
+                        "choiceText": "8 minutes",
+                        "answer": true
+                    },
+                    {
+                        "choiceId": 4,
+                        "choiceText": "10 minutes",
+                        "answer": false
+                    }
+                ]
             }
         ]
     },
@@ -110,6 +136,32 @@
                         "choiceId": 16,
                         "choiceText": "Lymphatic",
                         "answer": false
+                    }
+                ]
+            },
+            {
+                "quesId": 6,
+                "quesText": "Which of the following is not a member of the vitamin B complex?",
+                "choices": [
+                    {
+                        "choiceId": 1,
+                        "choiceText": "Thiamine",
+                        "answer": false
+                    },
+                    {
+                        "choiceId": 2,
+                        "choiceText": "Riboflavin",
+                        "answer": false
+                    },
+                    {
+                        "choiceId": 3,
+                        "choiceText": "Folic acid",
+                        "answer": false
+                    },
+                    {
+                        "choiceId": 4,
+                        "choiceText": "Ascorbic acid",
+                        "answer": true
                     }
                 ]
             }

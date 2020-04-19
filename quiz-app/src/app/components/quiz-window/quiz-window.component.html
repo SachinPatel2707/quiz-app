@@ -1,7 +1,7 @@
 <section class="quiz-window">
     <nav>
         <div class="row navbar">     
-            <h2>{{ quizes[quizId-1].subName }}</h2>
+            <h2>{{ quiz.subName }}</h2>
             <div class="navbar-right">
                 <ul>
                     <li><a routerLink='' class="button">home</a></li>
@@ -12,27 +12,31 @@
     </nav>
 
     <div class="row ques-tiles">
-        <a href="#" class="tile">1</a>
-        <a href="#" class="tile">2</a>
-        <a href="#" class="tile">3</a>
+        <a *ngFor="let tile of tiles; let i=index" [routerLink]="" (click)="tileAccess(i)" class="tile" [ngClass]="{'active': tile.isCurrent==true}">{{i+1}}</a>
     </div>
 
     <div class="row ques-box-container">
         <div class="ques-box">
             <div class="ques-text clearfix">
                 <div id="ques-marker">Q.</div>
-                <div id="ques">{{ quizes[quizId-1].questions[currentQues].quesText }}</div>
+                <div id="ques">{{ quiz.questions[currentQues].quesText }}</div>
             </div>
             <div class="ques-choices">
-                <label class="container" *ngFor = "let choice of quizes[quizId-1].questions[currentQues].choices">{{ choice.choiceText }}
-                    <input type="radio" checked="checked" name="radio">
+                <label class="container" *ngFor = "let choice of quiz.questions[currentQues].choices">{{ choice.choiceText }}
+                    <input type="radio" name="radio">
                     <span class="checkmark"></span>
                   </label>
             </div>
         </div>
-        <div class="btn-nav">
-            <a href="#" class="button">prev</a>
-            <a href="#" class="button">next</a>
-        </div>
+    </div>
+    <div class="navbar-right navbar-footer-right">
+        <ul>
+            <li>
+                <a [routerLink]="" (click)="prevQues()" class="button">prev</a>
+            </li>
+            <li>
+                <a [routerLink]="" (click)="nextQues()" class="button">next</a>
+            </li>
+        </ul>
     </div>
 </section>

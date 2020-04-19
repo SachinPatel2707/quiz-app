@@ -18,10 +18,10 @@ export class TestComponent implements OnInit {
   constructor(private quizService: QuizService) { }
 
   ngOnInit(): void {
-    this.quizService.fetchQuizes()
-    .subscribe((data: Quiz[]) => {
-      this.quizes = data
-      console.log(data)
-    })
+    // this.quizService.fetchQuiz("Physics")
+    // .subscribe((data: Quiz[]) => {
+    //   this.quizes = data
+    //   console.log(data)
+    // })
   }
 }
