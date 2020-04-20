@@ -22,8 +22,8 @@ export class HeaderComponent implements OnInit {
     // })
   }
 
-  onSelect(subName: string) {
-    this.router.navigate(['/quiz-window', subName])
-  }
+  // onSelect(subName: string) {
+  //   this.router.navigate(['/quiz-window', subName])
+  // }
 
 }

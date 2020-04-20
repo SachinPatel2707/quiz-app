@@ -13,9 +13,8 @@ import { Choice } from 'src/app/models/choice';
 })
 export class QuizWindowComponent implements OnInit {
 
-  // dummy data
   quiz: Quiz
-  quizes: Quiz[]
+  // quizes: Quiz[]
   tiles: QuesTile[] = []
   response: boolean[] = []
   result: number = 0
@@ -24,24 +23,30 @@ export class QuizWindowComponent implements OnInit {
   constructor(private quizService: QuizService, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
-    this.quizService.fetchQuizes()
-    .subscribe((data: Quiz[]) => {
-      this.quizes = data
+    // this.quizService.fetchQuizes()
+    // .subscribe((data: Quiz[]) => {
+    //   this.quizes = data
       
-      this.getQuiz()
+    //   this.getQuiz()
 
+    // })
+    let subName: string = this.route.snapshot.paramMap.get('subName')
+    this.quizService.fetchQuiz(subName)
+    .subscribe((res: Quiz) => {
+      this.quiz = res
+      this.getQuiz()
     })
   }
 
   getQuiz(): void {
-    let subName: string = this.route.snapshot.paramMap.get('subName')
+    
 
-    this.quizes.forEach(quiz => {
-      if(quiz.subName == subName) {
-        this.quiz = quiz
-        console.log(this.quiz)
-      }
-    })
+    // this.quizes.forEach(quiz => {
+    //   if(quiz.subName == subName) {
+    //     this.quiz = quiz
+    //     console.log(this.quiz)
+    //   }
+    // })
 
     for(let i = 0; i < this.quiz.questions.length; i++) {
       this.tiles.push(new QuesTile(false, false))
@@ -50,7 +55,7 @@ export class QuizWindowComponent implements OnInit {
 
     this.tiles[0].isCurrent = true
 
-    console.log(this.tiles)
+    // console.log(this.tiles)
   }
 
   prevQues() {
@@ -75,13 +80,13 @@ export class QuizWindowComponent implements OnInit {
     this.tiles[this.currentQues].isCurrent = true
   }
 
-  // test
   radioChangeHandler(choice: Choice) {
     if (choice.answer == true) {
       this.response[this.currentQues] = true      
     } else if (choice.answer == false) {
       this.response[this.currentQues] = false
     }
+    console.log(this.response)
   }
 
   onSubmit() {
