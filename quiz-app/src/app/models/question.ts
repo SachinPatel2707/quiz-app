@@ -1,6 +1,6 @@
 import { Choice } from "./choice";
 
-export interface Question {
+export class Question {
     quesId: number
     quesText: string
     choices: Choice[]

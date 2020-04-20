@@ -5,7 +5,7 @@
             <div class="navbar-right">
                 <ul>
                     <li><a routerLink='' class="button">home</a></li>
-                    <li><a routerLink='' class="button">submit</a></li>
+                    <li><a routerLink='' (click)="onSubmit()" class="button">submit</a></li>
                 </ul>
             </div>
         </div>
@@ -23,7 +23,9 @@
             </div>
             <div class="ques-choices">
                 <label class="container" *ngFor = "let choice of quiz.questions[currentQues].choices">{{ choice.choiceText }}
-                    <input type="radio" name="radio">
+                    <!-- test -->
+                    <input type="radio" name="radio" value="{{ choice.choiceId }}"  (change)="radioChangeHandler(choice)">
+                    <!-- <input type="radio" name="radio"> -->
                     <span class="checkmark"></span>
                   </label>
             </div>
@@ -32,10 +34,10 @@
     <div class="navbar-right navbar-footer-right">
         <ul>
             <li>
-                <a [routerLink]="" (click)="prevQues()" class="button">prev</a>
+                <a [routerLink]="" *ngIf="currentQues > 0" (click)="prevQues()" class="button">prev</a>
             </li>
             <li>
-                <a [routerLink]="" (click)="nextQues()" class="button">next</a>
+                <a [routerLink]="" *ngIf="currentQues < quiz.questions.length-1" (click)="nextQues()" class="button">next</a>
             </li>
         </ul>
     </div>

@@ -54,7 +54,12 @@ nav {
 }
 
 .navbar-right {
+    width: fit-content;
     float: right;
+}
+
+.navbar-footer-right {
+    margin-right: 10%;
 }
 
 .navbar-right ul {
@@ -65,7 +70,7 @@ nav {
     display: inline-block;
 }
 
-.btn {
+.button {
     border: 1px solid #bf6516;
     border-radius: 200px;
     margin: 20px;
@@ -75,7 +80,7 @@ nav {
     transition: background-color 0.2s, border 0.2s;
 }
 
-.btn:hover {
+.button:hover {
     background-color: #bf6516;
     border: 1px solid #bf6516;
     color: #fff;
@@ -105,6 +110,11 @@ nav {
     transition: border 0.2s, color 0.2s;
 }
 
+.active {
+    border: 1px solid #e67e22;
+    color: #e67e22;
+    transition: border 0.2s, color 0.2s;
+}
 
 /* QUES-BOX */
 
@@ -145,8 +155,9 @@ nav {
 }
 
 .btn-nav {
-    display: block;
+    display: flex;
 }
+
 
 /* The container */
 .container {

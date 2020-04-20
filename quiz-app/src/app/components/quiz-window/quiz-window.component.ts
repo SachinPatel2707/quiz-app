@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 
 import { Quiz } from 'src/app/models/quiz';
 import { QuizService } from 'src/app/services/quiz.service';
 import { QuesTile } from  '../../models/quesTile';
+import { Choice } from 'src/app/models/choice';
 
 @Component({
   selector: 'app-quiz-window',
@@ -16,9 +17,11 @@ export class QuizWindowComponent implements OnInit {
   quiz: Quiz
   quizes: Quiz[]
   tiles: QuesTile[] = []
+  response: boolean[] = []
+  result: number = 0
   currentQues: number = 0
 
-  constructor(private quizService: QuizService, private route: ActivatedRoute) { }
+  constructor(private quizService: QuizService, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
     this.quizService.fetchQuizes()
@@ -36,11 +39,13 @@ export class QuizWindowComponent implements OnInit {
     this.quizes.forEach(quiz => {
       if(quiz.subName == subName) {
         this.quiz = quiz
+        console.log(this.quiz)
       }
     })
 
     for(let i = 0; i < this.quiz.questions.length; i++) {
       this.tiles.push(new QuesTile(false, false))
+      this.response.push(false)
     }
 
     this.tiles[0].isCurrent = true
@@ -68,5 +73,24 @@ export class QuizWindowComponent implements OnInit {
     this.tiles[this.currentQues].isCurrent = false
     this.currentQues = index
     this.tiles[this.currentQues].isCurrent = true
+  }
+
+  // test
+  radioChangeHandler(choice: Choice) {
+    if (choice.answer == true) {
+      this.response[this.currentQues] = true      
+    } else if (choice.answer == false) {
+      this.response[this.currentQues] = false
+    }
+  }
+
+  onSubmit() {
+    this.response.forEach(res => {
+      if (res == true) {
+        this.result += 1
+      }
+    })
+
+    this.router.navigate(['/result', this.result, this.quiz.questions.length])    
   }
 }

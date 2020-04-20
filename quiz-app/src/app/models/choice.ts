@@ -1,5 +1,5 @@
-export interface Choice {
+export class Choice {
     choiceId: number
     choiceText: string
-    isAnswer: boolean
+    answer: boolean
 }
